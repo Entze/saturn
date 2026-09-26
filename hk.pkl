@@ -22,6 +22,10 @@ steps {
     fix = "morphe --quiet {{files}}"
   }
 
+  // github actions
+  ["actionlint"] = Builtins.actionlint
+  ["zizmor"] = Builtins.zizmor
+
   // mise
   ["mise"] = Builtins.mise
 
