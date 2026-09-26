@@ -1,3 +1,7 @@
 [tools]
+"pypi:git+https://github.com/GregoryGelfond/elenctic.git" = { version = "7f3fd10f6c506fa271fd91d0fb487040cb0d2deb", uvx = true, depends = "uv", }
+"cargo:https://github.com/GregoryGelfond/morphe" = { version = "rev:ebf800d16fe56503bf2297034717cfe5b5f6fff4", crate = "morphe-cli" }
+"conda:clingo" = "5.8.2"
 hk = "2.0.1"
 pkl = "0.32.1"
+uv = "0.12.19"

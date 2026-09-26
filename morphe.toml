@@ -1,0 +1,8 @@
+line_width = 120
+dialect = "clingo"          # or "asp-core-2"
+preserve_spellings = false
+format_embedded = false
+reorder = false
+
+[unsafe]
+reorder_includes = false

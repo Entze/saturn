@@ -4,6 +4,24 @@ import "package://github.com/jdx/hk/releases/download/v2.0.1/hk@2.0.1#/Builtins.
 // Using a coding agent? See https://hk.jdx.dev/agents
 
 steps {
+  // answer-set programming
+  ["clingo"] {
+    profiles = List("qa")
+    glob = List("**/*.lp")
+    batch = true
+    check = "clingo --text {{files}} > /dev/null"
+  }
+  ["elenctic"] {
+    profiles = List("qa")
+    glob = List("**/*.lp")
+    check = "elenctic --budget 5 --deadline 30 ."
+  }
+  ["morphe"] {
+    glob = List("**/*.lp")
+    check = "morphe --quiet --check {{files}}"
+    fix = "morphe --quiet {{files}}"
+  }
+
   // mise
   ["mise"] = Builtins.mise
 
